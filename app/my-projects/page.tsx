@@ -229,6 +229,8 @@ const Page: React.FC = () => {
               image={project.image}
               title={project.title}
               text={project.description}
+              previewUrl={project.previewUrl}
+              gitUrl={project.gitUrl}
             />
           </motion.li>
         ))}

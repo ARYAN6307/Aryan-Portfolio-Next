@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { AuroraBackground } from "./ui/aurora";
+import Link from "next/link";
 
 interface ProjectCardProps {
   image: string;
   title: string;
   text: string;
+  previewUrl: string;
+  gitUrl: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, text }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, text, previewUrl, gitUrl }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -37,16 +41,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, text }) => {
             Learn more &gt;
           </div>
         </div>
+        
         <div
-          style={{ backgroundImage: `url(${image})` }}
-          className="w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg p-4"
-        >
-          <div className="absolute inset-0 w-full h-full rounded-md bg-black opacity-50 z-[-1]" />
-          <div className="flex flex-col gap-20 py-3 z-[30]">
-            <h1 className="text-white text-2xl font-semibold">{title}</h1>
-            <p className="text-gray-200 text-[20px]">{text}</p>
-          </div>
+          style={{ backgroundImage: `url(${image})`  }}
+          className="w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg "
+        ><AuroraBackground>
+         <div className="text-3xl md:text-2.5xl font-bold dark:text-white text-center">
+         {title}
         </div>
+        <div className="font-extralight text-base md:text-1.5xl dark:text-neutral-200 py-4">
+        {text}
+        </div>
+        <div className="flex flex-row gap-3">
+        <button className="bg-black dark:bg-white rounded-full z-10 w-fit text-white dark:text-black px-4 py-2">
+        <Link legacyBehavior href={previewUrl} passHref>
+                  <a target="_blank" rel="noopener noreferrer">Link</a>
+        </Link> 
+        </button>
+        <button className="bg-black dark:bg-white rounded-full z-10 w-fit text-white dark:text-black px-4 py-2">
+        <Link legacyBehavior href={gitUrl} passHref>
+                  <a target="_blank" rel="noopener noreferrer">Github</a>
+        </Link> 
+        </button>
+        </div>
+          </AuroraBackground>
+        </div>
+     
       </motion.div>
     </div>
   );
