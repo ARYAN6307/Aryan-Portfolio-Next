@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, text, previewUr
   }
 
   return (
-    <div onClick={handleFlip} className="w-[500px] h-[300px]  cursor-pointer">
+    <div onClick={handleFlip} className="w-[500px] h-[300px] max-sm:w-80 max-md:w-100 max-sm:h-40 cursor-pointer">
       <motion.div
         className="flip-card-inner w-full h-full"
         initial={false}
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, text, previewUr
         
         <div
           style={{ backgroundImage: `url(${image})`  }}
-          className="w-full h-full group relative flip-card-back bg-cover bg-center text-white rounded-lg "
+          className="w-full h-full group relative flip-card-back bg-cover bg-center  text-white rounded-lg "
         ><AuroraBackground>
          <div className="text-3xl md:text-2.5xl font-bold dark:text-white text-center">
          {title}

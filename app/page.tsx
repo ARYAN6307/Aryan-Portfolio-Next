@@ -2,6 +2,7 @@
 
 import EmailSection from "@/components/Email";
 import Footer from "@/components/Footer";
+import Robo from "@/components/canvas/Robo";
 import { WobbleCardDemo } from "@/components/WobbleCardDemo";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,6 +48,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <Robo/>
       </div>
 
       <div
@@ -57,7 +59,7 @@ export default function Home() {
       </div>
 
       <div
-        className="flex flex-col w-full bg-cover bg-center h-screen px-40"
+        className="flex flex-col w-full bg-cover bg-center h-screen lg:px-40 sm:px-20"
         style={{ backgroundImage: "url(/main-bg.webp)" }}
       >
         <EmailSection />

@@ -182,13 +182,13 @@ const Page: React.FC = () => {
   };
   return (
     <div
-    style={{backgroundImage: "url(/mountains.jpg)"}}
-     className='w-screen h-screen flex items-center flex-col justify-center bg-center bg-cover overflow-scroll overflow-x-hidden'>
-        <h2 className="text-center text-4xl font-bold text-white mt-14  md:mb-12 ">
-        My Projects
-      </h2>
-      <div className='flex items-center flex-col gap-5 max-w-[90%] max-h-[90%] sm:px-5'>
-        
+    style={{ backgroundImage: "url(/mountains.jpg)" }}
+    className="w-screen h-screen flex items-center flex-col justify-center bg-center bg-cover overflow-scroll overflow-x-hidden"
+  >
+    <h2 className="text-center text-4xl font-bold text-white mt-14 md:mb-12">
+      My Projects
+    </h2>
+    <div className="flex items-center flex-col gap-5 max-w-[90%] max-h-[90%] sm:px-5">
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={() => handleTagChange("All")}
@@ -216,7 +216,7 @@ const Page: React.FC = () => {
           isSelected={tag === "UI"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12 pb-20">
+      <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-20">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={project.id}
@@ -235,8 +235,9 @@ const Page: React.FC = () => {
           </motion.li>
         ))}
       </ul>
-      </div>
     </div>
+  </div>
+  
   )
 }
 
