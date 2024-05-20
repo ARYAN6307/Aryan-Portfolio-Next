@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const Card: React.FC = () => {
   return (
-    <div className="w-176 h-80 mt-0 rounded-2xl bg-[#1b233d] p-1 overflow-hidden shadow-[rgba(100,100,111,0.2)_0px_7px_20px_0px] transition-transform duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105">
+    <div className="w-[90%] h-80 mt-0 mx-auto rounded-2xl bg-[#1b233d] p-1 overflow-hidden shadow-[rgba(100,100,111,0.2)_0px_7px_20px_0px] transition-transform duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105">
       <div className="h-36 rounded-xl flex flex-col bg-gradient-to-r from-[#049fbb] to-[#50f6ff] relative">
-      <Image className='w-fit h-fit m-0 pl-6 ' src={'/me.jpg'} alt={''} width={250} height={150}></Image>
+      <Image className='w-full h-fit m-0 px-auto ' src={'/me.jpg'} alt={''} width={250} height={150}></Image>
         <div className="border-b rounded-br-[10px] h-[30px] w-[130px] bg-[#1b233d] relative -skew-x-[40deg] shadow-[-10px_-10px_0_0_#1b233d]"></div>
         <div className="absolute top-7.5 left-0 bg-transparent h-[15px] w-[15px] rounded-tl-[15px] shadow-[-5px_-5px_0_2px_#1b233d]"></div>
         <div className="absolute top-0 w-full h-[30px] flex justify-between">

@@ -8,7 +8,7 @@ import Card from "./ui/card";
 export function WobbleCardDemo() {
   const words = ["Android", "Websites", "Ui/Ux", "ios"];
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl p-10 mt-10 mx-auto w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl p-10 mt-5 mx-auto w-full">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[400px] lg:min-h-[250px]"
         className=""
